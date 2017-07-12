@@ -1,9 +1,12 @@
 class PortfoliosController < ApplicationController
+  before_action :set_portfolio, only: [:show, :edit, :update, :destroy, :toggle_status]
   def index
     @portfolio_items = Portfolio.all
+    @page_title = "My Portfolio"
   end
   def new
     @portfolio_item = Portfolio.new
+    @page_title = "Create new portfolio item"
     3.times {@portfolio_item.technologies.build}
   end
   def create
@@ -47,6 +50,9 @@ class PortfoliosController < ApplicationController
   
   def portfolio_params
     params.require(:portfolio).permit(:title, :subtitle, :body, technologies_attributes: [:name])
+  end
+  private def set_portfolio
+    @portfolio_item = Portfolio.find(params[:id])
   end
   
 end
