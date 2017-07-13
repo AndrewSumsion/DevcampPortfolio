@@ -1,5 +1,6 @@
 <tr>
   <td><%= blog.title %></td>
+  <td>Published <%= distance_of_time_in_words(blog.created_at, Time.now) %> ago</td>
   <td><%= blog.body %></td>
   <td><%= link_to blog.status.to_s.slice(0,1).capitalize + blog.status.to_s.slice(1..-1), toggle_status_blog_path(blog) %></td>
   <td><%= link_to 'Show', blog %></td>
