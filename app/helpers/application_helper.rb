@@ -14,4 +14,7 @@ module ApplicationHelper
       content_tag(:p, "Thank you for visiting me from #{session[:source]}", class: "source-greeting")
     end
   end
+  def copyright_generator
+    TheBestViewTool::Renderer.copyright "Andrew Sumsion", "All rights reserved"
+  end
 end

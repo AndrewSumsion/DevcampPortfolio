@@ -1,3 +1,9 @@
+GIT
+  remote: https://github.com/AndrewSumsion/the_best_view_tool.git
+  revision: ffe1d3d95c4cefc97920381111ca0dbe1557167e
+  specs:
+    the_best_view_tool (0.1.0)
+
 GEM
   remote: https://rubygems.org/
   specs:
@@ -198,6 +204,7 @@ DEPENDENCIES
   sass-rails (~> 5.0)
   spring
   spring-watcher-listen (~> 2.0.0)
+  the_best_view_tool!
   turbolinks (~> 5)
   tzinfo-data
   uglifier (>= 1.3.0)
