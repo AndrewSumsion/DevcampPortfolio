@@ -1,6 +1,6 @@
 class User < ApplicationRecord
   
-  petergate(roles: [:admin, :editor], multiple: false)
+  petergate(roles: [:site_admin], multiple: false)
   
   # Include default devise modules. Others available are:
   # :confirmable, :lockable, :timeoutable and :omniauthable
