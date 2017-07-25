@@ -1,3 +1,20 @@
+GIT
+  remote: https://github.com/amatsuda/kaminari.git
+  revision: 2d22392756fe2f2a54b44d439df378f62096ad1d
+  specs:
+    kaminari (1.0.1)
+      activesupport (>= 4.1.0)
+      kaminari-actionview (= 1.0.1)
+      kaminari-activerecord (= 1.0.1)
+      kaminari-core (= 1.0.1)
+    kaminari-actionview (1.0.1)
+      actionview
+      kaminari-core (= 1.0.1)
+    kaminari-activerecord (1.0.1)
+      activerecord
+      kaminari-core (= 1.0.1)
+    kaminari-core (1.0.1)
+
 GEM
   remote: https://rubygems.org/
   specs:
@@ -66,6 +83,8 @@ GEM
     erubis (2.7.0)
     execjs (2.7.0)
     ffi (1.9.18)
+    font-awesome-rails (4.7.0.2)
+      railties (>= 3.2, < 5.2)
     friendly_id (5.1.0)
       activerecord (>= 4.0.0)
     globalid (0.4.0)
@@ -96,6 +115,8 @@ GEM
     nokogiri (1.8.0)
       mini_portile2 (~> 2.2.0)
     orm_adapter (0.5.0)
+    petergate (1.7.5)
+      activerecord (> 4.0.0)
     pg (0.20.0)
     pry (0.10.4)
       coderay (~> 1.1.0)
@@ -188,10 +209,13 @@ DEPENDENCIES
   byebug
   coffee-rails (~> 4.2)
   devise (~> 4.3)
+  font-awesome-rails (~> 4.7, >= 4.7.0.2)
   friendly_id (~> 5.1.0)
   jbuilder (~> 2.5)
   jquery-rails
+  kaminari!
   listen (~> 3.0.5)
+  petergate (~> 1.6, >= 1.6.3)
   pg (~> 0.18)
   pry-byebug
   puma (~> 3.0)
