@@ -9,6 +9,8 @@ class User < ApplicationRecord
   
   validates_presence_of :name
   
+  has_many :comments, dependent: :destroy
+  
   def first_name
     name = self.name.split
     name.delete_at(-1) if name.length > 1
