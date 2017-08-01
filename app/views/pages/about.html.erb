@@ -6,6 +6,22 @@
     <div class="row">
       <div class="col-md-4">
         <%= image_tag "profile.png", width: 300, alt: "profile image", class: "profile-img" %>
+        <div class="skills">
+          <% @skills.each do |skill| %>
+            <div class="skill">
+              <h4><%= skill.title %></h4>
+              <div class="progress">
+                <div
+                  class="progress-bar progress-bar-striped bg-warning"
+                  role="progressbar"
+                  aria-valuenow="<%= skill.percent_utilized %>"
+                  aria-valuemax="100"
+                  style="width: <%= skill.percent_utilized %>%"
+                ></div>
+              </div>
+            </div>
+          <% end %>
+        </div>
       </div>
       <div class="col-md-8">
         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut tempor turpis imperdiet, consequat lectus sed, dapibus ipsum. In euismod aliquet placerat. Integer sed dui vel nibh placerat placerat a in dui. Aliquam egestas ante vel magna volutpat auctor sit amet in nisl. Ut tincidunt velit vel sapien fermentum, ut maximus arcu venenatis. Suspendisse gravida consequat tortor id suscipit. Pellentesque elit ligula, aliquet at ultrices et, facilisis a purus. Praesent at urna et ante dignissim placerat quis ac diam. Nam congue ultrices tellus, eget dignissim leo aliquet ac. Donec lacus risus, tempor eu elementum vel, ultricies non tellus.</p>
